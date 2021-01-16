@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="384.0" type="javafx.scene.layout.Pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Circle fx:id="outerjoystick" fill="#dcdee1" layoutX="195.0" layoutY="139.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="btn_joystick" layoutX="195.0" layoutY="139.0" onMouseDragged="#circleOnMouseDraggedEventHandler" onMousePressed="#circleOnMousePressedEventHandler" onMouseReleased="#circleOnMouseReleasedEventHandler" radius="45.0" stroke="BLACK" strokeType="INSIDE">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <Slider fx:id="throttleSlider" blockIncrement="0.1" layoutX="35.0" layoutY="39.0" majorTickUnit="0.5" max="1.0" minorTickCount="4" orientation="VERTICAL" prefHeight="200.0" prefWidth="34.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="0.5" />
+      <Slider fx:id="rudderSlider" blockIncrement="0.1" layoutX="60.0" layoutY="255.0" majorTickUnit="0.5" max="1.0" min="-1.0" minorTickCount="8" prefHeight="34.0" prefWidth="270.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <Label alignment="CENTER" layoutX="-32.0" layoutY="124.0" prefHeight="31.0" prefWidth="104.0" rotate="-90.0" style="-fx-font-size: 15px; -fx-font-weight: bold;" text="THROTTLE" textAlignment="CENTER" />
+      <Label alignment="CENTER" layoutX="155.0" layoutY="284.0" prefHeight="31.0" prefWidth="81.0" style="-fx-font-size: 15px; -fx-font-weight: bold;" text="RUDDER" textAlignment="CENTER" />
+      <Label alignment="CENTER" layoutX="161.0" layoutY="4.0" prefHeight="21.0" prefWidth="67.0" style="-fx-font-weight: bold; -fx-font-size: 15px;" text="AILERON" textAlignment="CENTER" />
+      <Label alignment="CENTER" layoutX="287.0" layoutY="128.0" prefHeight="21.0" prefWidth="108.0" rotate="90.0" style="-fx-font-weight: bold; -fx-font-size: 15px;" text="ELEVATOR" textAlignment="CENTER" />
+      <ImageView fitHeight="31.0" fitWidth="174.0" layoutX="132.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/arrows-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="174.0" layoutX="263.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../images/arrows-removebg-preview.png" />
+         </image>
+      </ImageView>
+   </children>
+</fx:root>

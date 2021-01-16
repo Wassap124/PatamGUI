@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import sample.viewModel.MapController?>
+<?import sample.viewModel.Right_SideController?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="1123.0" type="javafx.scene.control.SplitPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+	  <AnchorPane minHeight="0.0" minWidth="0.0">
+		  <children>
+            <ImageView fitHeight="436.0" fitWidth="434.0" layoutX="8.0" layoutY="62.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/map-frame-cut.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="400.0" fitWidth="400.0" layoutX="25.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/blank_map.jpg" />
+               </image>
+            </ImageView>
+		  	<MapController fx:id="leftSide" layoutX="5.0" layoutY="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" />
+		  	<Right_SideController fx:id="rightSide" dividerPositions="0.13274336283185842" layoutX="435.0" layoutY="0.0" />
+		  </children>
+	  </AnchorPane>
+  </items>
+</fx:root>

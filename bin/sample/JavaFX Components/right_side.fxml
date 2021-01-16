@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import sample.viewModel.Display_ScriptController?>
+<?import sample.viewModel.JoystickController?>
+<?import sample.viewModel.Radio_ButtonsController?>
+
+<fx:root dividerPositions="0.13934426229508196" orientation="VERTICAL" prefHeight="454.0" prefWidth="733.0" type="javafx.scene.control.SplitPane" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <items>
+   	<AnchorPane minHeight="0.0" minWidth="0.0">
+   		<children>
+   			<Radio_ButtonsController fx:id="radioButtons" layoutX="-25.0" layoutY="0.0"/>
+   			<Display_ScriptController fx:id="displayScript" layoutX="0.0" layoutY="50.0" />
+   			<JoystickController fx:id="joystick" layoutX="350.0" layoutY="100.0"/>
+   		</children>
+   	</AnchorPane>
+   </items>
+</fx:root>
